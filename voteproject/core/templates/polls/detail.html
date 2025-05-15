@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="my-forms">
+    <h1>{{ poll.title }}</h1>
+    <p>{{ poll.description }}</p>
+    <p>Voting ends at: {{ poll.voting_deadline }}</p>
+
+    {% if is_closed or user.is_staff %}
+      <h2>Results</h2>
+      <ul>
+        {% for choice in choices %}
+          <li>
+            {{ choice.choice_text }} - {{ choice.votes }} vote{{ choice.votes|pluralize }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <form method="POST">
+        {% csrf_token %}
+        {% for choice in poll.choices.all %}
+          <label>
+            <input type="radio" name="choice" value="{{ choice.id }}">
+            {{ choice.choice_text }}
+          </label><br>
+        {% endfor %}
+        <button type="submit" class="btn">Vote</button>
+      </form>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

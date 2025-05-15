@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgba(209, 195, 114, 0.705);
+  align-content: center;
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+form {
+  margin-top: 20px;
+  
+  text-align: center;
+}
+
+div {
+  align-content: center;
+}
+
+.btn {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+title {
+  color: darkgoldenrod;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.my-forms {
+ 
+  
+  padding: 0 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f1f1f1;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vote {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+input {
+  text-align: justify;
+}
+
+.welcome {
+  padding: 0 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #5c9de7;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.back-button {
+ margin-left: 1000px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: #ddd;
+}

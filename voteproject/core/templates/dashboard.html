@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="my-forms">
+      <h2>Welcome, {{ request.user.username }}!</h2>
+    
+      {% if request.user.is_staff %}
+        <a href="{% url 'create_poll' %}" class="btn">Create New Poll</a>
+      {% endif %}
+      
+      
+
+      <h3>Available Polls</h3>
+      {% if polls %}
+        <ul>
+          {% for poll in polls %}
+            <li>
+              <strong>{{ poll.title }}</strong> - 
+              <a href="{% url 'poll_detail' poll.id %}">Vote</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No polls available yet.</p>
+      {% endif %}
+  </div>
+</div>
+{% endblock %}

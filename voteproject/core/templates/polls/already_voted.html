@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="my-forms">
+        <h2>{{ poll.title }}</h2>
+        <p>You have already voted in this poll.</p>
+        <p>Results will be shown when the poll is closed.</p>
+        <a href="{% url 'dashboard' %}">← Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}
