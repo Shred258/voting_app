@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-of3-5+0#0tqhpbg8x73przo^dv71s%4=hf&nmk#&jcu93z@&&u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -72,7 +72,7 @@ TEMPLATES = [
 ]
 TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
 
-WSGI_APPLICATION = 'voteproject.wsgi.application'
+WSGI_APPLICATION = 'voteproject.wsgi'
 
 
 # Database
