@@ -3,7 +3,7 @@ services:
     name: vote-app
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn voteproject.wsgi
+    startCommand: gunicorn voteproject.voteproject.wsgi
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: voteproject.settings
